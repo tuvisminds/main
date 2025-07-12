@@ -3,6 +3,7 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
+import { getImagePath } from "@/utils/path";
 
 export const Navbar = () => {
   const navigation = [
@@ -20,7 +21,7 @@ export const Navbar = () => {
         <Link href="/">
           <span className="flex items-center space-x-3">
             <Image
-              src="img/tuvis_minds_logo.png"
+              src={getImagePath("/img/tuvis_minds_logo.png")}
               alt="TuvisMinds Logo"
               width="180"
               height="60"
