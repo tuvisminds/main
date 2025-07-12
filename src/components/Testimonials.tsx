@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { getImagePath } from "@/utils/path";
 
 
 export const Testimonials = () => {
@@ -15,7 +16,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image="/img/user1.jpg"
+              image={getImagePath("/img/user1.jpg")}
               name="Sarah Chen"
               title="Innovation Lead at TechCorp"
             />
@@ -29,7 +30,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image="/img/user2.jpg"
+              image={getImagePath("/img/user2.jpg")}
               name="Marcus Johnson"
               title="Startup Founder"
             />
@@ -43,7 +44,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image="/img/user3.jpg"
+              image={getImagePath("/img/user3.jpg")}
               name="Priya Sharma"
               title="Educational Consultant"
             />
