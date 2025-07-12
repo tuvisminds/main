@@ -6,10 +6,11 @@ import {
   SparklesIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
+import { getImagePath } from "@/utils/path";
 
 // Static image paths for export build
-const benefitOneImg = "/img/37443113_8536728.jpg";
-const benefitTwoImg = "/img/37443093_8536753.jpg";
+const benefitOneImg = getImagePath("/img/37443113_8536728.jpg");
+const benefitTwoImg = getImagePath("/img/37443093_8536753.jpg");
 
 const benefitOne = {
   title: "Fostering Growth Mindset",
