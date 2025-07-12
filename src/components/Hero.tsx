@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { getImagePath } from "@/utils/path";
 
 export const Hero = () => {
   return (
@@ -44,7 +45,7 @@ export const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-[#96d712] via-[#2bb9c7] to-[#1a2842] opacity-20 rounded-2xl"></div>
             <Image
-              src="/img/2148861696.jpg"
+              src={getImagePath("/img/2148861696.jpg")}
               width="616"
               height="617"
               className={"object-cover rounded-2xl shadow-2xl"}

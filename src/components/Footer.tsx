@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { getImagePath } from "@/utils/path";
 
 export function Footer() {
   const navigation = ["Growth Mindset", "Our Brands", "Saavi", "Innovation", "Resources"];
@@ -18,7 +19,7 @@ export function Footer() {
                 className="flex items-center space-x-3"
               >
                 <Image
-                  src="/img/tuvis_minds_logo.png"
+                  src={getImagePath("/img/tuvis_minds_logo.png")}
                   alt="TuvisMinds Logo"
                   width="180"
                   height="60"
@@ -48,7 +49,7 @@ export function Footer() {
                 className="relative block w-44"
               >
                 <Image
-                  src="/img/vercel.svg"
+                  src={getImagePath("/img/vercel.svg")}
                   alt="Powered by Vercel"
                   width="212"
                   height="44"
