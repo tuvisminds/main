@@ -1,0 +1,152 @@
+import { SprintDashboardData } from "@/types";
+
+export const sprintDashboardData: SprintDashboardData = {
+  meta: {
+    sprintName: "Sprint 5 – Product Improvement",
+    goal: "Tucker missing URL and understand code, then implement the fixes across the stack.",
+    iterationLabel: "03 Nov 2025 → 18 Nov 2025",
+    startDate: "2025-11-03",
+    endDate: "2025-11-18",
+    focusArea: "Unified API endpoints for Tucker frontend",
+    iterationNumber: 5,
+  },
+  summary: {
+    progress: 0,
+    totalPoints: 40,
+    completedPoints: 0,
+    openTasks: 8,
+    closedTasks: 0,
+    carryOver: 0,
+    blockers: 0,
+    iocaineDoses: 0,
+  },
+  planning: {
+    capacity: {
+      teamMembers: 10,
+      sprintLengthDays: 10,
+      standardHours: 800,
+      leaveHours: 40,
+      bufferHours: 152,
+      finalHours: 608,
+      notes:
+        "Includes 20% buffer for production support, discovery spikes, and customer switchover rehearsals.",
+    },
+    velocity: {
+      averageStoryPoints: 40,
+      minStoryPoints: 32,
+      maxStoryPoints: 48,
+      trend: "steady",
+    },
+    estimation: {
+      toDo: 5,
+      inProgress: 8,
+      done: 3,
+    },
+    sprintCommitment: 40,
+  },
+  board: {
+    userStories: [
+      {
+        id: 90,
+        reference: "#90",
+        title: "Unified API Endpoints for Tucker Frontend",
+        type: "story",
+        badge: "N/E",
+        badgeTone: "blue",
+        watchers: 0,
+        comments: 0,
+        tag: "New",
+      },
+    ],
+    columns: [
+      {
+        id: "new",
+        title: "New",
+        accent: "border-white/10",
+        items: [],
+      },
+      {
+        id: "in-progress",
+        title: "In Progress",
+        accent: "border-[#2bb9c7]/40",
+        items: [
+          {
+            id: 94,
+            reference: "#94",
+            title:
+              "Tucker-frontend – Debug switching functionality for multi-customer view",
+            type: "task",
+            badge: "Frontend",
+            badgeTone: "green",
+            watchers: 3,
+            comments: 2,
+            tag: "Tucker",
+          },
+          {
+            id: 95,
+            reference: "#95",
+            title: "Testing StaynTouch flows on dev01",
+            type: "task",
+            badge: "QA",
+            badgeTone: "purple",
+            watchers: 2,
+            comments: 1,
+            tag: "StaynTouch",
+          },
+        ],
+      },
+      {
+        id: "ready",
+        title: "Ready for Test",
+        accent: "border-[#96d712]/40",
+        items: [
+          {
+            id: 87,
+            reference: "#87",
+            title: "Tucker 1.1 release hardening",
+            type: "task",
+            badge: "Release",
+            badgeTone: "green",
+            watchers: 1,
+            comments: 1,
+            tag: "Tucker",
+          },
+          {
+            id: 93,
+            reference: "#93",
+            title: "Sign-out regression on Tucker frontend",
+            type: "bug",
+            badge: "Bug",
+            badgeTone: "orange",
+            watchers: 4,
+            comments: 3,
+            tag: "Auth",
+          },
+          {
+            id: 92,
+            reference: "#92",
+            title: "Search bar fix inside dashboard",
+            type: "bug",
+            badge: "Bug",
+            badgeTone: "orange",
+            watchers: 2,
+            comments: 2,
+            tag: "Dashboard",
+          },
+        ],
+      },
+      {
+        id: "closed",
+        title: "Closed",
+        accent: "border-white/10",
+        items: [],
+      },
+    ],
+  },
+  alert: {
+    label: "Focus",
+    message:
+      "Keep the unified API effort unblocked by debugging Tucker frontend regressions before code freeze.",
+    severity: "medium",
+  },
+};
