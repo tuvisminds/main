@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
+import { Brands } from "@/components/Brands";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Benefits } from "@/components/Benefits";
 import { Video } from "@/components/Video";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <Container>
       <Hero />
+      <Brands />
       <SectionTitle
         preTitle="Growth Principles"
         title="Why Growth Mindset Matters"
