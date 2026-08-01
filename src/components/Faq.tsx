@@ -36,33 +36,33 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "What is TuvisMinds?",
+    question: "What does TuvisMinds do?",
     answer:
-      "TuvisMinds is an umbrella company that houses purposeful ventures and a research practice on enterprise AI governance. Today that means Saavi, our sustainable artisan-gifting brand, and the AI & Governance work published at shrini.tuvisminds.com.",
+      "TuvisMinds is an AI strategy and governance practice. We help enterprises decide which AI investments are worth making, design governance that defines what AI systems are permitted to do before they act, and execute AI strategy through to production. We also deliver keynotes and AI programs for leadership teams.",
   },
   {
-    question: "How do sustainable gifting and AI governance fit together?",
+    question: "We're evaluating an AI investment. How can you help?",
     answer:
-      "Both are about accountability by design. Saavi builds supply chains where communities and the environment are considered before a product ships; our governance work argues AI systems need their permissions defined before they act. Different domains, same discipline.",
+      "We run a readiness assessment built on the Grounded framework — ten diagnostic blocks and three non-negotiable gates, examined before capital is committed. The output is a verdict, not a score: proceed, fix these things first, or don't. It typically saves organizations from the most expensive kind of AI project — the one that was never going to work.",
   },
   {
-    question: "How can my company work with Saavi for corporate gifting?",
+    question: "What makes your approach to AI governance different?",
     answer:
-      "Saavi offers corporate gifting and personalized curation based on occasion, budget and recipient, with delivery across India. Visit saavi.tuvisminds.com, or reach out at saavi.gifts@gmail.com / +91 99700 66244 (WhatsApp available).",
+      "Most AI governance is monitoring and reporting — a careful account of what has already happened. An audit log is not a control; it is a record of the moment the control was missing. Our Operational Authority Layer defines what an AI system is structurally permitted to do before an action commits, shifting control from reactive monitoring to structural permission.",
   },
   {
-    question: "What is the Grounded framework?",
+    question: "Do you also help with implementation, or only strategy?",
     answer:
-      "Grounded is a diagnostic framework that tests whether an organization is structurally ready for AI investment. It examines readiness across ten blocks with three non-negotiable gates — before capital is committed. You can explore it at shrini.tuvisminds.com.",
+      "Both. Strategy that stops at a slide deck is theatre. We stay engaged through execution — operating models, vendor and platform decisions, pilot-to-production discipline, and the change management that makes AI adoption stick.",
   },
   {
-    question: "What is the Operational Authority Layer?",
+    question: "Can you speak at our event or run a program for our leadership team?",
     answer:
-      "It is a governance construct that defines what an AI system is permitted to do before it takes action, enforced structurally rather than reconstructed from audit logs afterwards. The full Governance Brief is available at shrini.tuvisminds.com.",
+      "Yes. We deliver keynote speeches on AI strategy, governance and autonomous decision-making, and structured AI programs for boards and leadership teams. See the Speaking page for formats, or get in touch to discuss your audience and agenda.",
   },
   {
-    question: "How do I get in touch?",
+    question: "How do we get started?",
     answer:
-      "Use the chat bubble at the bottom-right of this page and we'll get back to you by email. For Saavi-specific enquiries, saavi.gifts@gmail.com is the fastest route.",
+      "Email kshrinivas.lead@gmail.com, use the Contact page, or the chat bubble at the bottom-right of this page. The first conversation is free — we will tell you honestly whether and how we can help.",
   },
 ];

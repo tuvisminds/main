@@ -1,38 +1,33 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
-import { Brands } from "@/components/Brands";
+import { Services } from "@/components/Services";
 import { AIGovernance } from "@/components/AIGovernance";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 
-import { benefitOne, benefitTwo } from "@/components/data";
 export default function Home() {
   return (
     <Container>
       <Hero />
-      <Brands />
+      <Services />
       <AIGovernance />
 
       <div id="principles">
         <SectionTitle
-          preTitle="Our Principles"
-          title="One Standard: Accountability by Design"
+          preTitle="Our Principle"
+          title="Accountability by Design"
         >
-          Whether the product is a handcrafted gift or a framework for enterprise
-          AI, we hold the same line — consequences are considered before the
-          action, and the people affected are part of the design.
+          Consequences are considered before the action, not reconstructed
+          after the incident. Every engagement — a readiness verdict, a
+          governance architecture, a leadership program — holds that line.
         </SectionTitle>
       </div>
 
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-
       <div id="faq">
         <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
-          About TuvisMinds, working with Saavi, and the frameworks behind our AI
-          governance practice.
+          About working with TuvisMinds and the frameworks behind our AI
+          strategy and governance practice.
         </SectionTitle>
       </div>
 

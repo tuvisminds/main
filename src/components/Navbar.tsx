@@ -6,10 +6,10 @@ import { Logo } from "@/components/Logo";
 
 export const Navbar = () => {
   const navigation = [
-    { name: "Ventures", href: "#ventures" },
-    { name: "AI & Governance", href: "#ai-governance" },
-    { name: "Principles", href: "#principles" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Services", href: "/services/" },
+    { name: "Frameworks", href: "/frameworks/" },
+    { name: "Speaking", href: "/speaking/" },
+    { name: "About", href: "/about/" },
   ];
 
   return (
@@ -24,8 +24,8 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="#contact" className="px-6 py-2 text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md md:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
-                Get in Touch
+              <Link href="/contact/" className="px-6 py-2 text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md md:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
+                Talk to Us
               </Link>
             </div>
         </div>
@@ -63,8 +63,8 @@ export const Navbar = () => {
                           {item.name}
                       </Link>
                     ))}
-                    <Link href="#contact" className="w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md lg:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
-                        Get in Touch
+                    <Link href="/contact/" className="w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md lg:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
+                        Talk to Us
                     </Link>
                   </div>
                 </Disclosure.Panel>

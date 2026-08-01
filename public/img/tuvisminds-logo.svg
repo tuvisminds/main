@@ -1,0 +1,18 @@
+<svg width="880" height="220" viewBox="0 0 220 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm-leaf" x1="13" y1="38" x2="41" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1899a8"/>
+      <stop offset="1" stop-color="#9ccb46"/>
+    </linearGradient>
+  </defs>
+  <!-- mark -->
+  <rect x="3" y="3.5" width="48" height="48" rx="12" fill="#16243d"/>
+  <path d="M27 43.5V27.5" stroke="url(#tm-leaf)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M27 30.5c-7.2 0-13-5.8-13-13 7.2 0 13 5.8 13 13Z" fill="url(#tm-leaf)"/>
+  <path d="M27 24.5c0-6 4.8-10.8 10.8-10.8 0 6-4.8 10.8-10.8 10.8Z" fill="#2bb9c7"/>
+  <!-- wordmark -->
+  <text x="60" y="31" font-family="Manrope, Arial, Helvetica, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5">
+    <tspan fill="#16243d">Tuvis</tspan><tspan fill="#1899a8">Minds</tspan>
+  </text>
+  <text x="61" y="44" font-family="Manrope, Arial, Helvetica, sans-serif" font-weight="600" font-size="6.2" letter-spacing="1.6" fill="#8a94a6">GROWTH, BY DESIGN</text>
+</svg>

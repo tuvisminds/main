@@ -93,7 +93,7 @@ export const HeroVisual = () => {
       <g fontFamily="Manrope, sans-serif" fontSize="13" fontWeight="600">
         <rect x="72" y="66" width="168" height="34" rx="17" fill="#ffffff" fillOpacity="0.07" stroke="#ffffff" strokeOpacity="0.12" />
         <circle cx="94" cy="83" r="4" fill="#9ccb46" />
-        <text x="106" y="88" fill="#e6eef8">Purposeful ventures</text>
+        <text x="106" y="88" fill="#e6eef8">AI strategy</text>
 
         <rect x="300" y="470" width="152" height="34" rx="17" fill="#ffffff" fillOpacity="0.07" stroke="#ffffff" strokeOpacity="0.12" />
         <circle cx="322" cy="487" r="4" fill="#2bb9c7" />

@@ -5,16 +5,17 @@ import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const navigation = [
-    { name: "Ventures", href: "#ventures" },
-    { name: "AI & Governance", href: "#ai-governance" },
-    { name: "Principles", href: "#principles" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/services/" },
+    { name: "Frameworks", href: "/frameworks/" },
+    { name: "Speaking", href: "/speaking/" },
+    { name: "About", href: "/about/" },
+    { name: "Contact", href: "/contact/" },
   ];
-  const ventures = [
-    { name: "Saavi — Sustainable Gifting", href: "https://saavi.tuvisminds.com/" },
-    { name: "Shrini — AI & Governance", href: "https://shrini.tuvisminds.com/" },
-    { name: "Speakeasy", href: "http://speakeasy.tuvisminds.com/" },
+  const resources = [
+    { name: "Point of View & Essays", href: "https://shrini.tuvisminds.com/" },
+    { name: "The Grounded Framework", href: "https://shrini.tuvisminds.com/" },
+    { name: "The Governance Brief", href: "https://shrini.tuvisminds.com/" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/kshrinivas2000/" },
   ];
   return (
     <div className="relative border-t border-gray-100 dark:border-trueGray-800">
@@ -29,10 +30,9 @@ export function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              TuvisMinds builds purposeful ventures and rigorous thinking on
-              enterprise AI. Saavi brings sustainable artisan gifting to
-              corporates across India; our governance practice asks what AI
-              systems should be permitted to do — before they act.
+              TuvisMinds is an AI strategy and governance practice. We help
+              enterprises decide which AI investments to make, design governance
+              that holds before AI acts, and execute the strategy end to end.
             </div>
           </div>
 
@@ -51,9 +51,9 @@ export function Footer() {
             </div>
           </div>
           <div className="lg:col-span-2">
-            <div className="text-sm font-semibold tracking-wide text-gray-800 uppercase dark:text-gray-200 px-4 mb-2">Our Ventures</div>
+            <div className="text-sm font-semibold tracking-wide text-gray-800 uppercase dark:text-gray-200 px-4 mb-2">Resources</div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {ventures.map((item) => (
+              {resources.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -69,7 +69,21 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()} TuvisMinds. Purposeful Ventures. Accountable AI.
+          <div>
+            Copyright © {new Date().getFullYear()} TuvisMinds. AI Strategy. Accountable AI.
+          </div>
+          <div className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+            Our other, unrelated venture:{" "}
+            <a
+              href="https://saavi.tuvisminds.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-tuvis-teal"
+            >
+              Saavi
+            </a>{" "}
+            — sustainable artisan gifting.
+          </div>
         </div>
       </Container>
     </div>

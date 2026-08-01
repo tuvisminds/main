@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tm-leaf" x1="10" y1="34" x2="38" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1899a8"/>
+      <stop offset="1" stop-color="#9ccb46"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#16243d"/>
+  <path d="M24 40V24" stroke="url(#tm-leaf)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 27c-7.2 0-13-5.8-13-13 7.2 0 13 5.8 13 13Z" fill="url(#tm-leaf)"/>
+  <path d="M24 21c0-6 4.8-10.8 10.8-10.8 0 6-4.8 10.8-10.8 10.8Z" fill="#2bb9c7"/>
+</svg>
