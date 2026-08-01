@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { Container }  from "@/components/Container";
 
@@ -7,8 +6,8 @@ interface BenefitsProps {
   data: {
     imgPos?: "left" | "right";
     title: string;
+    kicker: string;
     desc: string;
-    image: string;
     bullets: {
       title: string;
       desc: string;
@@ -24,18 +23,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           className={`flex items-center justify-center w-full lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#96d712] via-[#2bb9c7] to-[#1a2842] opacity-15 rounded-2xl"></div>
-            <Image
-              src={data.image}
-              width={521}
-              height={521}
-              alt="Growth Mindset Benefits"
-              className={"object-cover rounded-2xl shadow-xl"}
-            />
-            <div className="absolute -top-3 -right-3 w-16 h-16 bg-gradient-to-br from-[#96d712] to-[#2bb9c7] rounded-full opacity-70 blur-lg"></div>
-            <div className="absolute -bottom-3 -left-3 w-12 h-12 bg-gradient-to-br from-[#2bb9c7] to-[#1a2842] rounded-full opacity-50 blur-md"></div>
-          </div>
+          <BenefitPanel kicker={data.kicker} bullets={data.bullets} />
         </div>
 
         <div
@@ -66,10 +54,56 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
   );
 };
 
+/* A composed panel of the section's own icons — replaces stock imagery. */
+function BenefitPanel({
+  kicker,
+  bullets,
+}: {
+  kicker: string;
+  bullets: { title: string; icon: React.ReactNode }[];
+}) {
+  const offsets = ["lg:translate-x-0", "lg:translate-x-8", "lg:translate-x-16"];
+  return (
+    <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-gradient-to-br from-minds-ink to-[#1d3252] p-8 lg:p-10 shadow-2xl">
+      {/* quiet concentric arcs */}
+      <svg
+        className="absolute -top-16 -right-16 w-64 h-64 opacity-20"
+        viewBox="0 0 200 200"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="100" cy="100" r="50" stroke="#2bb9c7" />
+        <circle cx="100" cy="100" r="75" stroke="#2bb9c7" strokeOpacity="0.6" />
+        <circle cx="100" cy="100" r="98" stroke="#2bb9c7" strokeOpacity="0.3" />
+      </svg>
+
+      <div className="relative text-xs font-semibold tracking-[0.2em] uppercase text-tuvis-cyan mb-8">
+        {kicker}
+      </div>
+
+      <div className="relative flex flex-col gap-4">
+        {bullets.map((item, index) => (
+          <div
+            key={index}
+            className={`flex items-center gap-4 rounded-xl bg-white/5 border border-white/10 px-5 py-4 backdrop-blur-sm transform ${offsets[index % offsets.length]}`}
+          >
+            <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-tuvis-teal to-tuvis-cyan">
+              {React.cloneElement(item.icon as React.ReactElement, {
+                className: "w-5 h-5 text-white",
+              })}
+            </div>
+            <span className="text-white font-medium">{item.title}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Benefit(props: any) {
   return (
       <div className="flex items-start mt-8 space-x-3">
-        <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-gradient-to-br from-[#2bb9c7] to-[#1a2842] rounded-md w-11 h-11 shadow-lg">
+        <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-gradient-to-br from-tuvis-teal to-minds-navy rounded-md w-11 h-11 shadow-lg">
           {React.cloneElement(props.icon, {
             className: "w-7 h-7 text-white",
           })}

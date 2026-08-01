@@ -11,31 +11,44 @@
   --color-trueGray-700: #404040;
   --color-trueGray-800: #262626;
   --color-trueGray-900: #171717;
-  
-  /* TuvisMinds Brand Colors */
-  --color-tuvis-green: #96d712;
+
+  /* TuvisMinds Brand Colors — refined palette
+     Navy is the anchor, teal is the working color,
+     leaf green is a small accent (growth), never a surface. */
+  --color-minds-navy: #16243d;
+  --color-minds-ink: #0d1830;
+  --color-tuvis-teal: #1899a8;
   --color-tuvis-cyan: #2bb9c7;
-  --color-minds-navy: #1a2842;
-  
-  /* Override indigo with brand colors */
-  --color-indigo-100: #e8f4ff;
-  --color-indigo-200: #d0e9ff;
-  --color-indigo-300: #a8d8ff;
-  --color-indigo-400: #7cc5ff;
-  --color-indigo-500: #2bb9c7;
-  --color-indigo-600: #2bb9c7;
-  --color-indigo-700: #1a2842;
-  --color-indigo-800: #1a2842;
-  --color-indigo-900: #1a2842;
+  --color-tuvis-green: #74a80f;
+  --color-tuvis-leaf: #9ccb46;
+
+  /* Override indigo with brand colors (template classes pick these up) */
+  --color-indigo-100: #e6f4f6;
+  --color-indigo-200: #c9e9ed;
+  --color-indigo-300: #93d5dd;
+  --color-indigo-400: #4cbcc9;
+  --color-indigo-500: #1899a8;
+  --color-indigo-600: #12808d;
+  --color-indigo-700: #16243d;
+  --color-indigo-800: #16243d;
+  --color-indigo-900: #0d1830;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
   html,
   body {
     @apply dark:bg-trueGray-900;
     font-family: 'Manrope', sans-serif;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Manrope', sans-serif;
   }
@@ -43,27 +56,22 @@
 
 @layer components {
   .tuvis-gradient {
-    @apply bg-gradient-to-br from-[#96d712] via-[#2bb9c7] to-[#1a2842];
+    @apply bg-gradient-to-br from-tuvis-teal to-minds-navy;
   }
-  
+
   .tuvis-gradient-hover {
-    @apply hover:bg-gradient-to-br hover:from-[#96d712] hover:to-[#2bb9c7] transition-all duration-300;
+    @apply hover:bg-gradient-to-br hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300;
   }
-  
+
   .tuvis-accent {
-    @apply text-[#96d712];
+    @apply text-tuvis-green dark:text-tuvis-leaf;
   }
-  
+
   .tuvis-primary {
-    @apply text-[#2bb9c7];
+    @apply text-indigo-600 dark:text-tuvis-cyan;
   }
-  
+
   .tuvis-secondary {
-    @apply text-[#1a2842];
-  }
-  
-  .tuvis-glow {
-    filter: drop-shadow(0 0 10px rgba(150, 215, 18, 0.3));
+    @apply text-minds-navy dark:text-white;
   }
 }
-

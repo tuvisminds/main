@@ -1,53 +1,35 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
-import { getImagePath } from "@/utils/path";
+import { Logo } from "@/components/Logo";
 
 export const Navbar = () => {
   const navigation = [
-    "Growth Mindset",
-    "Our Brands",
-    "Saavi",
-    "Innovation",
-    "Resources",
+    { name: "Ventures", href: "#ventures" },
+    { name: "AI & Governance", href: "#ai-governance" },
+    { name: "Principles", href: "#principles" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+    <div className="w-full sticky top-0 z-40 backdrop-blur-md bg-white/80 dark:bg-trueGray-900/80 border-b border-gray-100 dark:border-trueGray-800">
+      <nav className="container relative flex flex-wrap items-center justify-between px-8 py-4 mx-auto lg:justify-between xl:px-1">
         {/* Logo  */}
-        <Link href="/">
-          <span className="flex items-center space-x-3">
-            <Image
-              src={getImagePath("/img/tuvis_minds_logo.png")}
-              alt="TuvisMinds Logo"
-              width="180"
-              height="60"
-              className="h-10 w-auto"
-            />
-            <span className="flex items-center text-2xl font-bold">
-              <span className="px-2 py-1 bg-gradient-to-r from-[#2bb9c7] to-[#1a2842] text-white rounded-l-md font-manrope">
-                Tuvis
-              </span>
-              <span className="px-2 py-1 bg-[#1a2842] text-white rounded-r-md font-manrope">
-                Minds
-              </span>
-            </span>
-          </span>
+        <Link href="/" aria-label="TuvisMinds home">
+          <Logo />
         </Link>
 
         {/* get started  */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/" className="px-6 py-2 text-white bg-gradient-to-r from-[#2bb9c7] to-[#1a2842] rounded-md md:ml-5 hover:from-[#96d712] hover:to-[#2bb9c7] transition-all duration-300">
-                Explore Growth
+              <Link href="#contact" className="px-6 py-2 text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md md:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
+                Get in Touch
               </Link>
             </div>
         </div>
-                
+
         <Disclosure>
           {({ open }) => (
             <div>
@@ -76,27 +58,27 @@ export const Navbar = () => {
 
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <div>
-                    {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-[#2bb9c7] focus:text-[#2bb9c7] focus:bg-[#96d712] focus:bg-opacity-10 dark:focus:bg-gray-800 focus:outline-none">
-                          {item}
+                    {navigation.map((item) => (
+                      <Link key={item.name} href={item.href} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-tuvis-teal focus:text-tuvis-teal focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                          {item.name}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-[#2bb9c7] to-[#1a2842] rounded-md lg:ml-5 hover:from-[#96d712] hover:to-[#2bb9c7] transition-all duration-300">         
-                        Explore Growth
+                    <Link href="#contact" className="w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-tuvis-teal to-minds-navy rounded-md lg:ml-5 hover:from-tuvis-cyan hover:to-tuvis-teal transition-all duration-300">
+                        Get in Touch
                     </Link>
                   </div>
                 </Disclosure.Panel>
             </div>
           )}
         </Disclosure>
-        
+
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-[#2bb9c7] focus:text-[#2bb9c7] focus:bg-[#96d712] focus:bg-opacity-10 focus:outline-none dark:focus:bg-gray-800">
-                    {menu}
+            {navigation.map((menu) => (
+              <li className="mr-3 nav__item" key={menu.name}>
+                <Link href={menu.href} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-tuvis-teal focus:text-tuvis-teal focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                    {menu.name}
                 </Link>
               </li>
             ))}
@@ -107,4 +89,3 @@ export const Navbar = () => {
     </div>
   );
 }
-

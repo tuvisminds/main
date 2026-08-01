@@ -4,7 +4,7 @@
   "description": "Nextly Landing Page Template",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS=--no-experimental-webstorage next dev",
     "build": "next build",
     "build:gh": "NODE_ENV=production next build",
     "start": "next start",

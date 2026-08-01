@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TuvisMinds - Nurturing Growth Through Innovation",
-  description: "TuvisMinds is an umbrella company fostering growth mindset across diverse ventures. We believe in continuous learning, resilience, and embracing challenges as opportunities.",
+  title: "TuvisMinds — Purposeful Ventures. Accountable AI.",
+  description: "TuvisMinds builds purposeful ventures and rigorous thinking on enterprise AI governance — from Saavi's sustainable artisan gifting to the Grounded framework for AI readiness and the Operational Authority Layer.",
 };
 
 export default function RootLayout({

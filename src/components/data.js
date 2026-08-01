@@ -1,59 +1,53 @@
 import {
   LightBulbIcon,
-  AcademicCapIcon,
-  ArrowTrendingUpIcon,
-  HeartIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
+  GlobeAsiaAustraliaIcon,
+  HandRaisedIcon,
+  ScaleIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
 } from "@heroicons/react/24/solid";
-import { getImagePath } from "@/utils/path";
-
-// Static image paths for export build
-const benefitOneImg = getImagePath("/img/37443113_8536728.jpg");
-const benefitTwoImg = getImagePath("/img/37443093_8536753.jpg");
-
 const benefitOne = {
-  title: "Fostering Growth Mindset",
-  desc: "At TuvisMinds, we believe that growth comes from embracing challenges, learning from failures, and continuously evolving. Our approach nurtures resilience and curiosity.",
-  image: benefitOneImg,
+  title: "Impact by Design",
+  kicker: "Saavi · Sustainable Commerce",
+  desc: "Saavi proves that commerce can regenerate rather than extract. Every product decision — material, maker, packaging — is made with communities and the environment in the room.",
   bullets: [
     {
-      title: "Embrace Challenges",
-      desc: "Transform obstacles into opportunities for learning and growth.",
+      title: "Artisan-First Sourcing",
+      desc: "200+ rural artisans and women craftspeople earn sustainable livelihoods through fair, direct partnerships.",
+      icon: <HandRaisedIcon />,
+    },
+    {
+      title: "Sustainable Materials",
+      desc: "Wood, soya wax, jute and natural craft traditions replace plastic and disposability.",
+      icon: <GlobeAsiaAustraliaIcon />,
+    },
+    {
+      title: "Craft Meets Corporate",
+      desc: "Traditional Indian craftsmanship, curated to the standard corporate gifting demands.",
       icon: <LightBulbIcon />,
-    },
-    {
-      title: "Continuous Learning",
-      desc: "Foster a culture of lifelong learning and skill development.",
-      icon: <AcademicCapIcon />,
-    },
-    {
-      title: "Resilient Innovation",
-      desc: "Build resilience through iterative improvement and adaptation.",
-      icon: <ArrowTrendingUpIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Empowering Future Ventures",
-  desc: "Under the TuvisMinds umbrella, we incubate and nurture brands that embody growth principles. Each venture is designed to create meaningful impact while fostering innovation.",
-  image: benefitTwoImg,
+  title: "Accountability by Architecture",
+  kicker: "AI · Governance",
+  desc: "Our AI governance work starts from a simple premise: responsibility for consequences must be designed into systems structurally — not reconstructed from logs after something goes wrong.",
   bullets: [
     {
-      title: "Saavi Brand Development",
-      desc: "Our flagship brand focusing on sustainable growth solutions.",
-      icon: <SparklesIcon />,
+      title: "Authority Before Action",
+      desc: "Define what an AI system is permitted to do before it acts — the Operational Authority Layer.",
+      icon: <ShieldCheckIcon />,
     },
     {
-      title: "Innovation Incubation",
-      desc: "Supporting breakthrough ideas that drive positive change.",
-      icon: <RocketLaunchIcon />,
+      title: "Readiness Before Investment",
+      desc: "The Grounded framework tests organizational readiness across ten blocks and three non-negotiable gates.",
+      icon: <ScaleIcon />,
     },
     {
-      title: "Purpose-Driven Growth",
-      desc: "Aligning business growth with meaningful social impact.",
-      icon: <HeartIcon />,
+      title: "Evidence Over Hype",
+      desc: "Positions grounded in 26 years of enterprise technology, not in the AI news cycle.",
+      icon: <CpuChipIcon />,
     },
   ],
 };

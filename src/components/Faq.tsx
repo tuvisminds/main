@@ -36,21 +36,33 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question: "What is TuvisMinds?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "TuvisMinds is an umbrella company that houses purposeful ventures and a research practice on enterprise AI governance. Today that means Saavi, our sustainable artisan-gifting brand, and the AI & Governance work published at shrini.tuvisminds.com.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "How do sustainable gifting and AI governance fit together?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Both are about accountability by design. Saavi builds supply chains where communities and the environment are considered before a product ships; our governance work argues AI systems need their permissions defined before they act. Different domains, same discipline.",
+  },
+  {
+    question: "How can my company work with Saavi for corporate gifting?",
+    answer:
+      "Saavi offers corporate gifting and personalized curation based on occasion, budget and recipient, with delivery across India. Visit saavi.tuvisminds.com, or reach out at saavi.gifts@gmail.com / +91 99700 66244 (WhatsApp available).",
+  },
+  {
+    question: "What is the Grounded framework?",
+    answer:
+      "Grounded is a diagnostic framework that tests whether an organization is structurally ready for AI investment. It examines readiness across ten blocks with three non-negotiable gates — before capital is committed. You can explore it at shrini.tuvisminds.com.",
+  },
+  {
+    question: "What is the Operational Authority Layer?",
+    answer:
+      "It is a governance construct that defines what an AI system is permitted to do before it takes action, enforced structurally rather than reconstructed from audit logs afterwards. The full Governance Brief is available at shrini.tuvisminds.com.",
+  },
+  {
+    question: "How do I get in touch?",
+    answer:
+      "Use the chat bubble at the bottom-right of this page and we'll get back to you by email. For Saavi-specific enquiries, saavi.gifts@gmail.com is the fastest route.",
   },
 ];
